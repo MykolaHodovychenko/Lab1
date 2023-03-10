@@ -9,7 +9,7 @@ package ua.opnu.mobile.lab1
 //  sleepIn(true, false) → false
 //  sleepIn(false, true) → true
 fun sleepIn(weekday: Boolean, vacation: Boolean): Boolean {
-    return !weekday || vacation
+    return false
 }
 
 // TODO: У нас є папуга, який голосно розмовляє. Параметр "hour" - це поточна година
