@@ -4,14 +4,28 @@ import org.junit.Test
 
 import org.junit.Assert.*
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
+
 class ExampleUnitTest {
+
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun sleepIn() {
+        assertEquals(true, sleepIn(false, false))
+        assertEquals(false, sleepIn(true, false))
+        assertEquals(true, sleepIn(false, true))
+        assertEquals(true, sleepIn(true, true))
+    }
+
+    @Test
+    fun parrotTrouble() {
+        assertEquals(true, parrotTrouble(true, 6))
+        assertEquals(false, parrotTrouble(true, 7))
+        assertEquals(false, parrotTrouble(false, 6))
+        assertEquals(true, parrotTrouble(true, 21))
+        assertEquals(false, parrotTrouble(false, 21))
+        assertEquals(false, parrotTrouble(false, 20))
+        assertEquals(true, parrotTrouble(true, 23))
+        assertEquals(false, parrotTrouble(false, 23))
+        assertEquals(false, parrotTrouble(true, 20))
+        assertEquals(false, parrotTrouble(false, 12))
     }
 }
